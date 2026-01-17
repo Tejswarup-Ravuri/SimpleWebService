@@ -59,11 +59,19 @@
 <!--			<scope>compile</scope>-->
 		</dependency>
 
+<!--		<dependency>-->
+<!--			<groupId>org.projectlombok</groupId>-->
+<!--			<artifactId>lombok</artifactId>-->
+<!--&lt;!&ndash;			<version>1.18.42</version>&ndash;&gt;-->
+<!--			<lombok.version>1.18.42</lombok.version>-->
+<!--			<scope>compile</scope>-->
+<!--		</dependency>-->
+
+
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-<!--			<version>1.18.42</version>-->
-			<lombok.version>1.18.42</lombok.version>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+			<version>7.0.2</version>
 			<scope>compile</scope>
 		</dependency>
 

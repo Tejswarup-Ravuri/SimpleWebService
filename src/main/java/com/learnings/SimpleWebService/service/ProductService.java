@@ -22,26 +22,36 @@ public class ProductService {
         return prod.findAll();
     }
 
-    public Product getProductById(int id){
+    public Product getProductById(Integer id){
         return prod.findById(id).orElse(null);
     }
 
 
-    public Product addProduct(Product product, MultipartFile image) throws IOException {
-        product.setImageName(image.getOriginalFilename());
-        product.setImageData(image.getBytes());
-        product.setImageType(image.getContentType());
+//    public Product addProduct(Product product, MultipartFile image) throws IOException {
+//        product.setImageName(image.getOriginalFilename());
+//        product.setImageData(image.getBytes());
+//        product.setImageType(image.getContentType());
+//        return prod.save(product);
+//    }
+
+//    public Product updateProduct(int id,Product product,MultipartFile ImageFile) throws IOException {
+//
+//        product.setImageType(ImageFile.getContentType());
+//        product.setImageData(ImageFile.getBytes());
+//        product.setImageName(ImageFile.getOriginalFilename());
+//
+//        return prod.save(product);
+//    }
+
+    public Product addProduct(Product product) throws IOException {
         return prod.save(product);
     }
 
-    public Product updateProduct(int id,Product product,MultipartFile ImageFile) throws IOException {
-
-        product.setImageType(ImageFile.getContentType());
-        product.setImageData(ImageFile.getBytes());
-        product.setImageName(ImageFile.getOriginalFilename());
-
+    public Product updateProduct(Integer id,Product product) throws IOException {
         return prod.save(product);
     }
+
+
 
     public void deleteProduct(int id){
 
@@ -49,4 +59,7 @@ public class ProductService {
     }
 
 
+    public List<Product> searchProducts(String keyword) {
+        List<Product> products = prod.searchByQuery(keyword); return products;
+    }
 }
