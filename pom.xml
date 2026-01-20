@@ -63,7 +63,7 @@
 <!--			<groupId>org.projectlombok</groupId>-->
 <!--			<artifactId>lombok</artifactId>-->
 <!--&lt;!&ndash;			<version>1.18.42</version>&ndash;&gt;-->
-<!--			<lombok.version>1.18.42</lombok.version>-->
+<!--&lt;!&ndash;			<lombok.version>1.18.42</lombok.version>&ndash;&gt;-->
 <!--			<scope>compile</scope>-->
 <!--		</dependency>-->
 
@@ -73,6 +73,11 @@
 			<artifactId>spring-security-core</artifactId>
 			<version>7.0.2</version>
 			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
 	</dependencies>

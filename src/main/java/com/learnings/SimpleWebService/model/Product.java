@@ -3,7 +3,6 @@ package com.learnings.SimpleWebService.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jdk.jfr.DataAmount;
-import lombok.*;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
@@ -12,11 +11,6 @@ import java.util.regex.Pattern;
 
 @Component
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
 public class Product {
     public Integer getId() {
         return id;
