@@ -16,7 +16,8 @@ public class MyUserDetailsService implements UserDetailsService {
     private UserRepo userepo;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        //we need a user name and we get it from DB,
+        //We need to find wheather the  username is available in DB or not
+        //Username is provided to this function by Dao
         // how do you get details from db it is using repo layer
         Users user=userepo.findByUsername(username);
 
@@ -27,6 +28,8 @@ public class MyUserDetailsService implements UserDetailsService {
         //In general case you will return object of return type which is UserDetails,
         // but its an interface you cant create an object for interface and return it and  you want custom configurations
         // so you should create a class that implement the interface which is UserPrinciple in model package
+        //If found → wraps the Users entity in a UserPrinciple object and return it o Doa
+        //Now Dao calls getPassword method which is in UserPrinciple
         return new UserPrinciple(user);
     }
 }

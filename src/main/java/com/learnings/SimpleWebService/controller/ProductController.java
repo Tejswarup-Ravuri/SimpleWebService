@@ -1,6 +1,7 @@
 package com.learnings.SimpleWebService.controller;
 
 import com.learnings.SimpleWebService.model.Product;
+import com.learnings.SimpleWebService.model.Users;
 import com.learnings.SimpleWebService.service.ProductService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,6 +47,9 @@ public class ProductController {
             return new ResponseEntity<>(product, HttpStatus.NOT_FOUND);
         }
     }
+
+
+
 
 //    @PostMapping("/products")
 //    public ResponseEntity<?> addProduct(@RequestPart Product prod, @RequestPart MultipartFile image){
