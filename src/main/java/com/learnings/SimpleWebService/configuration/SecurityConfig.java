@@ -73,6 +73,7 @@ public class SecurityConfig {
                 .anyRequest().authenticated());
         http.formLogin(Customizer.withDefaults());
         http.httpBasic(Customizer.withDefaults());
+        //Tells Spring Security not to create or use an HTTP session at all.
         http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(jwtFilter,UsernamePasswordAuthenticationFilter.class);
 
