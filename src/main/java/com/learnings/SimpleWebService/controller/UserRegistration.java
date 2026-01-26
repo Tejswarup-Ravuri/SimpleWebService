@@ -35,6 +35,13 @@ public class UserRegistration {
 
     }
 
+    @PostMapping("/login")
+    public String userLogin(@RequestBody Users user){
+        return userRegistrationService.verifyUser(user);
+
+    }
+
+
 
 
 }
